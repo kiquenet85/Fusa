@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--     http://namaste-android.blogspot.com/2012/03/argb-color-codes.html -->
+    <color name="actionbar_text">#ffffD700</color>
+    
+</resources>

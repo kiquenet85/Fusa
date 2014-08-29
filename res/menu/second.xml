@@ -4,9 +4,15 @@
     tools:context="com.example.zonamigosfusa.otro.SecondActivity" >
 
     <item
+        android:id="@+id/conf_settings"
+        android:orderInCategory="99"
+        android:title="@string/conf_settings"
+        app:showAsAction="ifRoom"/>
+    <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
-        app:showAsAction="never"/>
+        android:icon="@drawable/icon"
+        app:showAsAction="ifRoom"/>
 
 </menu>

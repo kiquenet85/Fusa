@@ -7,5 +7,6 @@
     <string name="msg_activity_second">Estas en la nueva actividad.\nRevisa el código de la aplicación para entenderlo mejor.</string>
     <string name="secondActivity">Pasar a Segunda Actividad</string>
     <string name="action_settings">Settings</string>
+    <string name="conf_settings">Configuracion</string>
 
 </resources>
