@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!--     http://developer.android.com/guide/topics/resources/providing-resources.html -->
+    <string name="app_name">Zone des amis</string>
+    <string name="hello_world">Bonjour tout le monde Fusa Bella!</string>
+    <string name="title_activity_second">Zone Deux</string>
+    <string name="msg_activity_second">Vous êtes dans la nouvelle activité.\n\nExplorez le code pour mieux le comprendre.</string>
+    <string name="secondActivity">Aller à la deuxième activité</string>
+    <string name="conf_settings">Configuration</string>
+
+</resources>

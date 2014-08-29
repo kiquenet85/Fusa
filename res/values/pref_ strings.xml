@@ -2,6 +2,7 @@
 <resources>
 
 	 <!--Preferences Strings-->
+    <string name="pref_header_general">General</string>
     <string name="pref_location_label">Ubicación</string>
     <string name="pref_Location_key" translatable="false">location</string>
     <string name="pref_location_default" translatable="false">3682274</string>
