@@ -34,6 +34,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.zonamigosfusa.MainActivity" />
         </activity>
+          <activity
+            android:name="com.example.zonamigosfusa.otro.SettingsActivity"
+            android:label="@string/conf_settings"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nes.example.sunshine_app.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

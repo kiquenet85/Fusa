@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+       <ListPreference
+        android:key="@string/pref_Location_key"
+        android:title="@string/pref_location_label"
+        android:defaultValue="@string/pref_location_default"
+        android:entries="@array/pref_location_list_titles"
+        android:entryValues="@array/pref_location_list_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+       <ListPreference
+        android:key="@string/pref_metric_key"
+        android:title="@string/pref_metric_label"
+        android:defaultValue="@string/pref_metric_default"
+        android:entries="@array/pref_metric_list_titles"
+        android:entryValues="@array/pref_metric_list_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+</PreferenceScreen>

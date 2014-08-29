@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	 <!--Preferences Strings-->
+    <string name="pref_location_label">Ubicación</string>
+    <string name="pref_Location_key" translatable="false">location</string>
+    <string name="pref_location_default" translatable="false">3682274</string>
+    <string-array name="pref_location_list_titles">
+        <item>Mountain View</item>
+        <item>Bogota</item>
+        <item>Fusa</item>
+    </string-array>
+    <string-array name="pref_location_list_values">
+        <item>5375480</item>
+        <item>3688689</item>
+        <item>3682274</item>
+    </string-array>
+
+    <string name="pref_metric_label">Metrica</string>
+    <string name="pref_metric_key" translatable="false">metric</string>
+    <string name="pref_metric_default" translatable="false">1</string>
+    <string-array name="pref_metric_list_titles">
+        <item>metric</item>
+        <item>imperial</item>
+    </string-array>
+    <string-array name="pref_metric_list_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>  
+
+</resources>

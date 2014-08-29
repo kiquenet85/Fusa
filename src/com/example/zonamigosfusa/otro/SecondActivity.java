@@ -1,11 +1,9 @@
 package com.example.zonamigosfusa.otro;
 
 
-import com.example.zonamigosfusa.R;
-
 import android.annotation.TargetApi;
 import android.app.ActionBar;
-import android.app.AlertDialog.Builder;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -16,6 +14,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.zonamigosfusa.R;
 
 public class SecondActivity extends ActionBarActivity {
 	
@@ -46,12 +46,18 @@ public class SecondActivity extends ActionBarActivity {
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
+			callPreferences();
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}
 	
-	// Called before subsequent visible lifetimes
+	private void callPreferences() {
+		Intent intent=new Intent(this,SettingsActivity.class);
+        startActivity(intent);
+	}
+
+		// Called before subsequent visible lifetimes
 		// for an Activity process.
 		@Override
 		public void onRestart() {
