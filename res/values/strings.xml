@@ -8,5 +8,6 @@
     <string name="secondActivity">Pasar a Segunda Actividad</string>
     <string name="action_settings" translatable="false">Settings</string>
     <string name="conf_settings">Configuracion</string>
+    <string name="showLoc">Ubicación</string>
 
 </resources>
