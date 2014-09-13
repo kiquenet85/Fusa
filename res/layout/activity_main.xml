@@ -17,7 +17,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="@string/secondActivity" />
-
     <Button
         android:id="@+id/button2"
         android:layout_width="fill_parent"
@@ -25,5 +24,13 @@
         android:layout_above="@+id/button1"
         android:layout_centerHorizontal="true"
         android:text="@string/showLoc" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button2"
+        android:layout_marginBottom="14dp"
+        android:text="@string/generate_broadcast" />
 
 </RelativeLayout>

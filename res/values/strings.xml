@@ -15,5 +15,6 @@
     <string name="title_activity_third">ThirdActivity</string>
     <string name="title_activity_detail">Detalle Lista</string>
     <string name="show_contacts">Show contacts in List</string>
+    <string name="generate_broadcast">Create Broadcast</string>
 
 </resources>

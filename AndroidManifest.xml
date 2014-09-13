@@ -10,6 +10,8 @@
         android:targetSdkVersion="19" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
 
     <application
         android:allowBackup="true"
@@ -78,6 +80,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+         <receiver
+            android:name=".broadcast.Receiver"
+            android:exported="false" >
+            <intent-filter>
+<!--                 EL paquete de la app asegura su unicidad, sin embargo puede colocarse otro nombre -->
+                <action android:name="course.examples.BroadcastReceiver.show_toast" >
+                </action>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

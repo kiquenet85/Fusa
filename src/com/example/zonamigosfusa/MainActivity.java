@@ -21,8 +21,11 @@ import android.widget.Toast;
  */
 public class MainActivity extends ActionBarActivity {
 
+	//--Broadcast 
+	private static final String CUSTOM_INTENT = "course.examples.BroadcastReceiver.show_toast";
+	
 	//-- Este botón existe en el layout activity_main.
-	private Button btnSegundaActividad, btnMostrarUbicacion;
+	private Button btnSegundaActividad, btnMostrarUbicacion, btnCrearBroacast;
 	private String LOG_TAG=this.getClass().getSimpleName(); 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,7 @@ public class MainActivity extends ActionBarActivity {
 		//-- Se pueden utilizar las vistas del layout activity_main de la siguiente manera:
 		btnSegundaActividad=(Button)findViewById(R.id.button1);
 		btnMostrarUbicacion=(Button)findViewById(R.id.button2);
+		btnCrearBroacast=(Button)findViewById(R.id.button3);
 		//-- Ejemplo de un evento para un botón.
 		btnSegundaActividad.setOnClickListener(new OnClickListener() {
 			
@@ -55,6 +59,20 @@ public class MainActivity extends ActionBarActivity {
 				showLocationInMap();
 			}
 		});
+		
+		OnClickListener myListener=new myListener();
+		btnCrearBroacast.setOnClickListener(myListener);
+	}
+	
+	//-- Instanciar un Listener a través de una clase anónima.
+	public class myListener implements OnClickListener{
+
+		@Override
+		public void onClick(View v) {
+			sendBroadcast(new Intent(CUSTOM_INTENT),
+					android.Manifest.permission.VIBRATE);
+		}
+		
 	}
 		
 	public void showLocationInMap() {
