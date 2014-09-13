@@ -4,7 +4,9 @@
 package com.example.zonamigosfusa;
 
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.net.Uri;
+import android.os.BatteryManager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -12,8 +14,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
-
-import com.example.zonamigosfusa.otro.SecondActivity;
 
 /**
  * @author Nestor Diazgranados
@@ -28,6 +28,8 @@ public class MainActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		getBatteryStatus();
 		
 		//-- Se pueden utilizar las vistas del layout activity_main de la siguiente manera:
 		btnSegundaActividad=(Button)findViewById(R.id.button1);
@@ -71,5 +73,29 @@ public class MainActivity extends ActionBarActivity {
 			Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
 		}
 	}
+	
+	 //http://developer.android.com/training/monitoring-device-state/battery-monitoring.html
+    private int getBatteryStatus() {
+        IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+        Intent batteryStatus = registerReceiver(null, ifilter);
+
+        // Are we charging / charged?
+        int status = batteryStatus.getIntExtra(BatteryManager.EXTRA_STATUS, -1);
+        boolean isCharging = status == BatteryManager.BATTERY_STATUS_CHARGING ||
+                status == BatteryManager.BATTERY_STATUS_FULL;
+
+        int level=batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL,-1);
+        int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+
+        float batteryPct = level / (float)scale;
+
+        // How are we charging?
+        int chargePlug = batteryStatus.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1);
+        boolean usbCharge = chargePlug == BatteryManager.BATTERY_PLUGGED_USB;
+        boolean acCharge = chargePlug == BatteryManager.BATTERY_PLUGGED_AC;
+
+        Toast.makeText(this,"Percentage: "+batteryPct+" Battery Level is: "+level+", CHARGING: "+isCharging+" USB Plug:"+usbCharge+" CHARGE Plug:"+acCharge,Toast.LENGTH_LONG).show();
+        return status;
+    }
 	
 }
