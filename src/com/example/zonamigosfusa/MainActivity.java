@@ -39,8 +39,8 @@ public class MainActivity extends ActionBarActivity {
 			public void onClick(View v) {
 				//Es posible también llamar la siguiente actividad de dos formas:
 				
-				Intent i= new Intent(v.getContext(),SecondActivity.class);
-				//Intent i= new Intent("com.example.zonamigosfusa.otro.SecondActivity");
+				//Intent i= new Intent(v.getContext(),SecondActivity.class);
+				Intent i= new Intent("com.example.zonamigosfusa.otro.SecondActivity");
 				startActivity(i);
 			}
 		});

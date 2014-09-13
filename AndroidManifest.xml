@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- El paquete principal es el declarado aquí package="com.example.zonamigosfusa"  -->
+<!-- El paquete principal es el declarado aquí package="com.example.zonamigosfusa" -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.zonamigosfusa"
     android:versionCode="1"
@@ -8,8 +8,8 @@
     <uses-sdk
         android:minSdkVersion="10"
         android:targetSdkVersion="19" />
-    
-     <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -25,24 +25,44 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- Observen como para la segunda actividad el android:name tiene todo el paquete y el nombre de la Actividad.
-        Esto se hace cuando no se encuentra en el paquete principal.
-         -->
+        <!--
+        Observen como para la segunda actividad el android:name tiene todo el paquete y el nombre de la Actividad.
+        Esto se hace cuando no se encuentra en el paquete principal.
+        -->
         <activity
-            android:name="com.example.zonamigosfusa.otro.SecondActivity"
+            android:name=".otro.SecondActivity"
             android:label="@string/title_activity_second"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.zonamigosfusa.MainActivity" />
+
+            <intent-filter>
+                <action android:name="com.example.zonamigosfusa.otro.SecondActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
-          <activity
-            android:name="com.example.zonamigosfusa.otro.SettingsActivity"
+        <activity
+            android:name=".otro.SettingsActivity"
             android:label="@string/conf_settings"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nes.example.sunshine_app.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ThirdActivity"
+            android:label="@string/title_activity_third"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.zonamigosfusa.MainActivity" />
+             <intent-filter>
+                <action android:name="com.example.zonamigosfusa.otro.SecondActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 

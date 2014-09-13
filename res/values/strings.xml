@@ -9,5 +9,9 @@
     <string name="action_settings" translatable="false">Settings</string>
     <string name="conf_settings">Configuracion</string>
     <string name="showLoc">Ubicación</string>
+    <string name="home_nombre_usuario">Nombre</string>
+    <string name="home_contrasena_usuario">"Contraseña"</string>
+    <string name="profile_image">Profile Image es para describir para que se usa la imagen</string>
+    <string name="title_activity_third">ThirdActivity</string>
 
 </resources>

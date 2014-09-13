@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.GridLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    app:alignmentMode="alignBounds"
+    app:columnOrderPreserved="false"
+    app:orientation="vertical"
+ 	app:useDefaultMargins="true" 
+    app:columnCount="6"
+    app:rowCount="6"
+    >
+	
+    <!-- BAsado en:
+    	1. http://stackoverflow.com/questions/14500677/how-do-i-specify-width-and-height-of-android-gridlayout-cells-in-relative-measur
+    	2. http://developer.android.com/reference/android/widget/GridLayout.html
+     -->	
+    <!--
+	    Para hacer el cambio de un Linear Layout a un gridLayout:
+	    1. Agregar a Grid Layout columnCount y RowCount. :  Espacio en que se divide la pantalla.
+	    2. Agregar ColumnSpan y Row Span a cada elemento dentro del Grid Layout : Espacio que toma cada elemento del espacio en pantalla.
+	    3. Para evitar estrechamientos evitar las propiedades de gravedad.
+	    4. En este caso vertical, colocar para los elementos del GRID dar a la propiedad HEIGHTwrap_content, nunca como match parent.
+    
+     -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        app:layout_columnSpan="6"
+        app:layout_rowSpan="2"
+        >
+
+        <ImageView
+            android:id="@+id/app_perfil_imageView1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/profile_image"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon" />
+
+        <TextView
+            android:id="@+id/app_perfil_textView1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:text="@string/home_nombre_usuario" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/app_perfil_frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_columnSpan="6"
+        app:layout_rowSpan="2"
+        app:layout_gravity="fill">
+
+        <Button
+            android:id="@+id/app_perfil_button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_columnSpan="6"
+        app:layout_rowSpan="2">
+
+        <Button
+            android:id="@+id/app_perfil_button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" 
+            />
+
+        <Button
+            android:id="@+id/app_perfil_button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" />
+    </LinearLayout>
+    
+
+</android.support.v7.widget.GridLayout>
