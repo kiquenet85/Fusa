@@ -75,21 +75,14 @@ public class SecondActivity extends ActionBarActivity {
 		FragmentManager fragmentManager = getSupportFragmentManager();
 		FragmentTransaction fragmentTransaction = 
 				fragmentManager.beginTransaction(); 
-		
-		
-			fragmentTransaction.remove(firstFragment);
-			
-		
-		 fragmentTransaction.addToBackStack(null);
-			fragmentTransaction.commit();
-			
-			//--Adding new Fragment
+
+		//--Adding new Fragment
 			if (secondFragment==null){
 				secondFragment=new SecondFragment();
 			}
 			fragmentManager = getSupportFragmentManager();
 			fragmentTransaction =fragmentManager.beginTransaction(); 
-     		fragmentTransaction.add(R.id.container,secondFragment, "NewFragment");
+     		fragmentTransaction.replace(R.id.container,secondFragment);
          	fragmentTransaction.addToBackStack(null);
 			fragmentTransaction.commit();
 	}
@@ -224,12 +217,12 @@ public class SecondActivity extends ActionBarActivity {
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    String forecast=(String)listAdapter.getItem(position);
-                    Toast.makeText(view.getContext(),forecast,Toast.LENGTH_SHORT).show();
+                    String contact=(String)listAdapter.getItem(position);
+                    Toast.makeText(view.getContext(),contact,Toast.LENGTH_SHORT).show();
                     
-                    /*Intent intent= new Intent(getActivity(),DetailActivity.class);
-                    intent.putExtra(Intent.EXTRA_TEXT,forecast);
-                    startActivity(intent);*/
+                    Intent intent= new Intent(getActivity(),DetailActivity.class);
+                    intent.putExtra(Intent.EXTRA_TEXT,contact);
+                    startActivity(intent);
                 }
             });
             return rootView;

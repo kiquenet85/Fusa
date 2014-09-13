@@ -13,6 +13,7 @@
     <string name="home_contrasena_usuario">"Contraseña"</string>
     <string name="profile_image">Profile Image es para describir para que se usa la imagen</string>
     <string name="title_activity_third">ThirdActivity</string>
+    <string name="title_activity_detail">Detalle Lista</string>
     <string name="show_contacts">Show contacts in List</string>
 
 </resources>

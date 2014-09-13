@@ -51,6 +51,20 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nes.example.sunshine_app.MainActivity" />
         </activity>
+          <activity
+            android:name=".otro.DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.zonamigosfusa.MainActivity" />
+
+            <intent-filter>
+                <action android:name=".otro.DetailActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ThirdActivity"
             android:label="@string/title_activity_third"
