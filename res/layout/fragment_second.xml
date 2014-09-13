@@ -13,4 +13,13 @@
         android:layout_height="wrap_content"
         android:text="@string/msg_activity_second" />
 
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/show_contacts"
+        android:onClick="changeFragment" />
+
 </RelativeLayout>
